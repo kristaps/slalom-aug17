@@ -6,20 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>symm</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css">
   <link rel="stylesheet" href="./stylesheets/app.css">
 </head>
 
 <body>
-  
-  <div class="grid-container">
-    <div class="grid-x">
-      <div class="large-auto cell">
-        <h1>Here amazing SYMM starts</h1>
-      </div>
-    </div>
-  </div>
 
-  <script src="js/bundle.js"></script>
+<div flex page-container step-1-container >
+  <div step-1-form>
+      <label> My Location
+        <input type="text" id="airport-search-input" placeholder="Your city or airport code">
+      </label>
+      <label> I'm Looking For Medical Service
+        <input type="text" id="service-search-input" placeholder="Medical service keywords">
+      </label>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+<script src="js/bundle.js"></script>
+
 </body>
 
 </html>
