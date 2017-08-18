@@ -1,3 +1,9 @@
+frontend/build/
+frontend/node_modules/
+frontend/.idea/
+.idea/
 .idea/modules.xml
 .idea/workspace.xml
 .idea/vcs.xml
+.idea/vcs.xml
+.pyc$
