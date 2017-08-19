@@ -10,7 +10,14 @@ class ServiceCategoryAdmin(admin.ModelAdmin):
 
 
 class ProviderAdmin(admin.ModelAdmin):
-    list_display =  ('id', 'name')
+    list_display =  ('id', 'name', 'address', 'nearest_airport', 'get_transfer_time')
+
+    def get_transfer_time(self, obj):
+        if obj.airport_transfer_time is None:
+            return 'Unknown'
+
+        return '{}h'.format(obj.airport_transfer_time / 3600)
+    get_transfer_time.verbose_name = 'Airport transport time'
 
 
 class ServiceAdmin(admin.ModelAdmin):
