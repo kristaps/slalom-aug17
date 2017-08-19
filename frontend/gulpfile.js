@@ -34,6 +34,13 @@ gulp.task('js', bundle);
 b.on('update', bundle);
 b.on('log', gutil.log);
 
+
+gulp.task('other-js', function() {
+	return gulp.src('./src/other-js/**')
+		.pipe(gulp.dest('build/other-js'));
+});
+
+
 function bundle() {
   return b.bundle()
     .on('error', onError)
@@ -89,9 +96,10 @@ gulp.task('serve', function() {
 
   gulp.watch('./src/assets/**/*', ['assets']);
   gulp.watch('./src/js/**/*', ['js']);
+  gulp.watch('./src/js/**/*', ['other-js']);
   gulp.watch('./src/templates/**/*', ['html']);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'js', 'assets'], 'serve'));
+gulp.task('default', gulpSequence(['html', 'sass', 'js', 'other-js', 'assets'], 'serve'));

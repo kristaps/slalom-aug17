@@ -39,7 +39,7 @@ var airportSearchOptions = {
 var serviceSearchOptions = {
 
 	url: function(phrase) {
-		return `https://temp1.kristapsraats.com/api/services?term=${phrase}`;
+		return `https://medincluded.com/api/services?term=${phrase}`;
 	},
 	getValue: function(element) {
 		return element.name;
