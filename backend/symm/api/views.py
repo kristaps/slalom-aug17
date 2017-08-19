@@ -22,6 +22,14 @@ class ServiceSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'price_high', 'price_low', 'duration')
 
 
+class ServiceDetailSerializer(ServiceSerializer):
+    class Meta(object):
+        model = Service
+        fields = ServiceSerializer.Meta.fields + ('providers',)
+
+    providers = ProviderSerializer(many=True)
+
+
 class ServiceViewSet(viewsets.ModelViewSet):
     class Meta(object):
         model = Service
@@ -36,6 +44,12 @@ class ServiceViewSet(viewsets.ModelViewSet):
             qs = qs.filter(name__icontains=term)
 
         return qs
+
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return ServiceDetailSerializer
+
+        return ServiceSerializer
 
 
 class ServiceCategorySerializer(serializers.ModelSerializer):
