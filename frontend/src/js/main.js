@@ -2,6 +2,7 @@ var foundation = require('../../node_modules/foundation-sites/dist/js/foundation
 var Rx = require('rxjs/Rx');
 
 $(document).foundation();
+console.log('works dd dd');
 
 // Airport search options
 var airportSearchOptions = {
@@ -39,7 +40,7 @@ var airportSearchOptions = {
 var serviceSearchOptions = {
 
 	url: function(phrase) {
-		return `here_goes_python_api_search_url`;
+		return `https://temp1.kristapsraats.com/api/services?term=${phrase}`;
 	},
 	getValue: function(element) {
 		return element.name;
@@ -70,4 +71,9 @@ $("#airport-search-input").easyAutocomplete(airportSearchOptions);
 $("#service-search-input").easyAutocomplete(serviceSearchOptions);
 
 
+// Common use functions
+
+function scrollIntoView(id) {
+	document.querySelector(id).scrollIntoView();
+}
 

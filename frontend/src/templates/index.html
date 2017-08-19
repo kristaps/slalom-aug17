@@ -5,23 +5,114 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>symm</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css">
-  <link rel="stylesheet" href="./stylesheets/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css">
+    <link rel="stylesheet" href="./stylesheets/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
 
-<div flex page-container step-1-container >
-  <div step-1-form>
-      <label> My Location
-        <input type="text" id="airport-search-input" placeholder="Your city or airport code">
-      </label>
-      <label> I'm Looking For Medical Service
-        <input type="text" id="service-search-input" placeholder="Medical service keywords">
-      </label>
-  </div>
+<div flex flex-column page-container step-1-container>
+    <div flex-column page-section step-1-search>
+        <div page-nav flex flex-end>
+            <div page-nav-element>Log in</div>
+        </div>
+        <!--<label> I live in-->
+        <!--<input type="text" id="airport-search-input" placeholder="Your city or airport code">-->
+        <!--</label>-->
+        <div service-search-wrap flex-space-between>
+            <div header-1>Symm</div>
+            <div header-2>We care about you health and money you spend</div>
+            <div search-input-wrap flex flex-align-end>
+                <label> I'm looking for service
+                    <input type="text" id="service-search-input" placeholder="E.g. dentist, face lift">
+                </label>
+                <button class="button" onclick="scrollIntoView('#how-it-works')">How it works</button>
+            </div>
+            <div info-wrap flex flex-space-between flex-align-center>
+                <div info-text-1>You can save up to 43% on services like:</div>
+                <div action-text>View all</div>
+            </div>
+        </div>
+    </div>
+    <div page-section step-1-providers>
+        <div service-categories-wrap flex flex-wrap>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+            <div service-category flex flex-column flex-center flex-align-center>
+                <div category-name>Dermotology</div>
+                <div providers-amount>34 clinics worldwide</div>
+            </div>
+        </div>
+    </div>
+    <div page-section step-1-how-it-works>
+        <div page-section-header page-section-header id="how-it-works">Hows it works?</div>
+        <div features-wrap flex flex-space-between>
+            <div feature flex flex-column flex-align-center>
+                <div feature-img-wrap flex flex-center flex-align-center>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#D8D8D8" d="M34 51h2V36h-2zM8.5 53L7 51.4l19.2-19.2 1.5 1.5zM51 35l-8.4-4 1-1.8 8.2 4zm-9.2-15.6l-1.4-1.4 11-11L53 8.4zM24.4 23l-16-6.5.7-2 16 6.8z"/>
+                            <path fill="#5F87C0" d="M5 52c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm0 8c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm30-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 8c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5m20-27c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 8c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5m0-39c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 8c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5M5 11c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 8c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5"/>
+                            <path fill="#24B985" d="M34 17c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9m0 20c-6 0-11-5-11-11s5-11 11-11 11 5 11 11-5 11-11 11"/>
+                        </g>
+                    </svg>
+                </div>
+                <div feature-header>Search service</div>
+                <div feature-text>Let us know what service you need
+                </div>
+            </div>
+            <div feature flex flex-column flex-align-center>
+                <div feature-img-wrap flex flex-center flex-align-center>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#5F87C0" d="M16 53c.3 0 .5 0 .7.3l4.4 4.4 4.3-4.4a1 1 0 0 1 .7-.3c.3 0 .5 0 .7.3l4.3 4.3 4.3-4.3a1 1 0 0 1 1.4 0l4.3 4.3 4.3-4.3a1 1 0 0 1 .7-.3 1 1 0 0 1 .7.3l3.3 3.3v-53l-3.3 3a1 1 0 0 1-1.4 0L41 2.5l-4.3 4.3a1 1 0 0 1-1.4 0L31 2.4l-4.3 4.3a1 1 0 0 1-1.4 0L21 2.4l-4.3 4.3a1 1 0 0 1-1.4 0L12 3.5v53l3.3-3.2a1 1 0 0 1 .7-.3m35 7a1 1 0 0 1-.7-.2L46 55.4l-4.3 4.3a1 1 0 0 1-1.4 0L36 55.4l-4.3 4.3a1 1 0 0 1-1.4 0L26 55.4l-4.2 4.4a1 1 0 0 1-.7.3s-.4 0-.6-.2L16 55.4l-4.3 4.4c-.3.3-.7.4-1 .2a1 1 0 0 1-.7-1V1a1 1 0 0 1 1.7-.6L16 4.6 20.3.3a1 1 0 0 1 1.4 0L26 4.6 30.3.3a1 1 0 0 1 1.4 0L36 4.6 40.3.3a1 1 0 0 1 1.4 0L46 4.6 50.3.4A1 1 0 0 1 52 1v58a1 1 0 0 1-1 1"/>
+                            <path fill="#D8D8D8" d="M38.7 16h-20a1 1 0 1 1 0-2h20a1 1 0 1 1 0 2m-10 8h-10a1 1 0 1 1 0-2h10a1 1 0 1 1 0 2m0 8h-10a1 1 0 1 1 0-2h10a1 1 0 1 1 0 2M26 40h-7.4a1 1 0 1 1 0-2H26a1 1 0 1 1 0 2"/>
+                            <path fill="#24B985" d="M40 48a1 1 0 0 1-1-1v-3a1 1 0 1 1 2 0v3a1 1 0 0 1-1 1m0-18.2a1 1 0 0 1-1-1V26a1 1 0 1 1 2 0v2.8a1 1 0 0 1-1 1"/>
+                            <path fill="#24B985" d="M40 45a4.8 4.8 0 0 1-4.8-4.8 1 1 0 1 1 2 0A2.8 2.8 0 0 0 40 43a2.8 2.8 0 0 0 2.8-2.8 2.8 2.8 0 0 0-2.8-2.8 4.8 4.8 0 0 1-4.8-4.8 4.8 4.8 0 0 1 4.8-4.8 4.8 4.8 0 0 1 4.8 4.8 1 1 0 1 1-2 0 2.8 2.8 0 0 0-2.8-2.8 2.8 2.8 0 0 0-2.8 2.8 2.8 2.8 0 0 0 2.8 2.8 4.8 4.8 0 0 1 4.8 4.8A4.8 4.8 0 0 1 40 45"/>
+                        </g>
+                    </svg>
+                </div>
+                <div feature-header>Book service</div>
+                <div feature-text>We will find best deals around world and book tickets
+                </div>
+            </div>
+            <div feature flex flex-column flex-align-center>
+                <div feature-img-wrap flex flex-center flex-align-center>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                        <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
+                            <path stroke="#D8D8D8" d="M22.4 23.7c0-1.4 1.2-1.3 2.6-1.3 1.3 0 2.5 0 2.5 1.3m5 0c0-1.4 1.2-1.3 2.5-1.3 1.4 0 2.6 0 2.6 1.3M31 41.3V59"/>
+                            <path stroke="#5F87C0" d="M23.4 38.8C12.6 40.8 1 40.3 1 50.8V59h58v-8.2c0-10.5-11.3-10-22.5-12M45 23l1.4-9.4S47.7 1 30 1C12.4 1 13.6 13.6 13.6 13.6L15 23"/>
+                            <path stroke="#5F87C0" stroke-linejoin="round" d="M30 41.3c3.8 0 12.6-5 12.6-12.6 3.8 0 3.8-7.5 0-7.5L41.4 15c-10 0-10-4-11.4-5.2-1.2 1.3-1.3 5-11.3 5l-1.3 6.4c-3.8 0-3.8 7.5 0 7.5 0 7.6 8.8 12.6 12.6 12.6z"/>
+                            <path stroke="#24B985" d="M23 50a4 4 0 1 1-8 0 4 4 0 0 1 8 0zm-4-10.5V46m23-6.4V44m-3 10c-1.3 0-2-1-2-2v-5c0-2 0-3 5-3m3 10c1.4 0 2-1 2-2v-4c0-2.5 0-4-5-4"/>
+                        </g>
+                    </svg>
+                </div>
+                <div feature-header>Travel to service</div>
+                <div feature-text>You will travel to destination and save on service</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
