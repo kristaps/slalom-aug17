@@ -66,6 +66,6 @@ class ServiceCategoryViewSet(viewsets.ModelViewSet):
 
         term = self.request.query_params.get('term', '').strip()
         if term:
-            qs = qs.filter(services__name__icontains=term)
+            qs = qs.filter(services__name__icontains=term).distinct()
 
         return qs
