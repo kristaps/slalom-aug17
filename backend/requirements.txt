@@ -2,3 +2,4 @@ Django
 djangorestframework
 mysqlclient
 django-cors-headers
+python-dateutil
