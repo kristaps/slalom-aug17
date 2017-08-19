@@ -1,5 +1,4 @@
 from collections import defaultdict
-from typing import Dict, List
 from datetime import timedelta, datetime, date
 
 from rest_framework import viewsets, serializers, decorators, response
