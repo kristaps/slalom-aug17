@@ -2,7 +2,6 @@ var foundation = require('../../node_modules/foundation-sites/dist/js/foundation
 var Rx = require('rxjs/Rx');
 
 $(document).foundation();
-console.log('works dd dd');
 
 // Airport search options
 var airportSearchOptions = {
@@ -58,7 +57,7 @@ var serviceSearchOptions = {
 	},
 	list: {
 		onChooseEvent: function() {
-			console.log($("#service-search-input").getSelectedItemData());
+			window.location.href = `${window.location.origin}/providers.html`;
 		}
 	},
 	requestDelay: 400,
