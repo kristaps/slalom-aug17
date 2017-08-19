@@ -10,7 +10,7 @@
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
-@include foundation-forms;
+//@include foundation-forms;
 // @include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
@@ -51,4 +51,52 @@
 
 // @include foundation-prototype-classes;
 
+//Project shared styles
+[page-container] {
+  height: 100vh;
+  background-color: #ccc;
+}
 
+[flex] {
+  display: flex;
+}
+
+
+// Page specific styles
+[step-1-container] {
+  align-items: center;
+  justify-content: center;
+}
+
+[step-1-form] {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  flex-direction: column;
+
+  label {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  // Adjust easy autocomplete plugin styles
+  .easy-autocomplete-container {
+
+    ul {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+
+  [step-1-form] {
+    flex-direction: row;
+
+    label {
+      width: 48%;
+      margin-bottom: 0;
+    }
+
+  }
+}

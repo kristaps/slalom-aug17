@@ -41,7 +41,8 @@
   },
   "dependencies": {
     "foundation-sites": "6.4.0",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "rxjs": "^5.4.3"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
