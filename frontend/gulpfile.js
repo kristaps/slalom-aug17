@@ -44,8 +44,8 @@ function bundle() {
       presets: ['es2015']
     }) : gutil.noop())
     .pipe(concat('bundle.js'))
-    .pipe(!prod ? sourcemaps.write('.') : gutil.noop())
-    .pipe(prod ? streamify(uglify()) : gutil.noop())
+    // .pipe(!prod ? sourcemaps.write('.') : gutil.noop())
+    // .pipe(prod ? streamify(uglify()) : gutil.noop())
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());
 }
@@ -74,6 +74,11 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task('assets', function() {
+	return gulp.src('./src/assets/**/*.{gif,jpg,png,svg}')
+		.pipe(gulp.dest('build/assets'));
+});
+
 // browser sync server for live reload
 gulp.task('serve', function() {
   browserSync.init({
@@ -82,9 +87,11 @@ gulp.task('serve', function() {
     }
   });
 
+  gulp.watch('./src/assets/**/*', ['assets']);
+  gulp.watch('./src/js/**/*', ['js']);
   gulp.watch('./src/templates/**/*', ['html']);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'js'], 'serve'));
+gulp.task('default', gulpSequence(['html', 'sass', 'js', 'assets'], 'serve'));
