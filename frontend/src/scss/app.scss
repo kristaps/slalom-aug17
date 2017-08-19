@@ -279,8 +279,8 @@ body {
   }
 
   &:focus {
-    background-color: $pure-white;
-    color: $custom-green-btn;
+    background-color: $custom-green-btn;
+    color: $pure-white;
   }
 }
 
@@ -298,5 +298,6 @@ body {
   }
   .eac-item {
     color: $custom-grey;
+    text-transform: capitalize;
   }
 }
