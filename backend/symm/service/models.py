@@ -26,6 +26,8 @@ class Provider(models.Model):
     name = models.CharField(max_length=200)
     services = models.ManyToManyField(Service, related_name='providers')
     rating = models.PositiveIntegerField(default=5, choices=[(i, str(i)) for i in (1, 2, 3, 4, 5)])
+    nearest_airport = models.CharField(max_length=20)
+    airport_transfer_time = models.PositiveIntegerField(default=10800)
 
     def __str__(self):
         return 'Provider: {}'.format(self.name)
