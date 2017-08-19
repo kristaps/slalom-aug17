@@ -86,8 +86,7 @@ class ServiceViewSet(viewsets.ModelViewSet):
 
         dates = [d.date() for d in list(rule)[:50]]
 
-        Availability = Dict[date, List[dict]]
-        availability: Availability = defaultdict(list)
+        availability = defaultdict(list)
         for provider in service.providers.all():
             bookings = Appointment.objects.filter(
                 service=service,
