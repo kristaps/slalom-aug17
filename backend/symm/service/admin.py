@@ -14,7 +14,15 @@ class ProviderAdmin(admin.ModelAdmin):
 
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display =  ('id', 'name')
+    list_display =  ('id', 'name', 'price_low', 'price_high', 'get_duration')
+
+    def get_duration(self, obj):
+        if obj.duration is None:
+            return 'Unknown'
+
+        return '{}h'.format(obj.duration / 3600)
+    get_duration.verbose_name = 'Duration'
+
 
 
 admin.site.register(ServiceCategory, ServiceCategoryAdmin)

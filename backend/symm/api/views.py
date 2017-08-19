@@ -27,7 +27,15 @@ class ServiceViewSet(viewsets.ModelViewSet):
         model = Service
 
     serializer_class = ServiceSerializer
-    queryset = Service.objects.all()
+
+    def get_queryset(self):
+        qs = Service.objects.all()
+
+        term = self.request.query_params.get('term', '').strip()
+        if term:
+            qs = qs.filter(name__icontains=term)
+
+        return qs
 
 
 class ServiceCategorySerializer(serializers.ModelSerializer):
@@ -35,12 +43,29 @@ class ServiceCategorySerializer(serializers.ModelSerializer):
         model = ServiceCategory
         fields = ('id', 'name', 'services')
 
-    services = ServiceSerializer(many=True)
+    services = serializers.SerializerMethodField()
+
+    def get_services(self, cat):
+        qs = Service.objects.filter(category=cat)
+
+        term = self.context['request'].query_params.get('term', '').strip()
+        if term:
+            qs = qs.filter(name__icontains=term)
+
+        return ServiceSerializer(qs, many=True).data
 
 
 class ServiceCategoryViewSet(viewsets.ModelViewSet):
     class Meta(object):
         model = ServiceCategory
 
-    queryset = ServiceCategory.objects.all()
     serializer_class = ServiceCategorySerializer
+
+    def get_queryset(self):
+        qs = ServiceCategory.objects.all()
+
+        term = self.request.query_params.get('term', '').strip()
+        if term:
+            qs = qs.filter(services__name__icontains=term)
+
+        return qs
