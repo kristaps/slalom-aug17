@@ -5,7 +5,7 @@ from service.models import Provider, Service, ServiceCategory
 class ProviderSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = Provider
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'rating')
 
 
 class ProviderViewSet(viewsets.ModelViewSet):
@@ -19,7 +19,7 @@ class ProviderViewSet(viewsets.ModelViewSet):
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = Service
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'price_high', 'price_low', 'duration')
 
 
 class ServiceViewSet(viewsets.ModelViewSet):
