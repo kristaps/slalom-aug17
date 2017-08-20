@@ -13,7 +13,7 @@ from dateutil.relativedelta import relativedelta
 class ProviderSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = Provider
-        fields = ('id', 'name', 'rating')
+        fields = ('id', 'name', 'rating', 'address', 'nearest_airport', 'airport_transfer_time')
 
 
 class ProviderViewSet(viewsets.ModelViewSet):
