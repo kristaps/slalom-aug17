@@ -6,6 +6,7 @@ var buffer       = require('vinyl-buffer');
 var gulp         = require('gulp');
 var gutil        = require('gulp-util');
 var gulpSequence = require('gulp-sequence');
+var includehtml  = require('gulp-include-html');
 var processhtml  = require('gulp-minify-html');
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -61,6 +62,7 @@ function bundle() {
 // html
 gulp.task('html', function() {
   return gulp.src('./src/templates/**/*')
+    .pipe(includehtml())
     .pipe(processhtml())
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
