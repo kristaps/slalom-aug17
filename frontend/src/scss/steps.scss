@@ -1,0 +1,37 @@
+[steps] {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d8d8d8;
+    line-height: 32px;
+    margin-top: 15px;
+
+
+    [step] {
+        border-bottom: 1px solid #d8d8d8;
+        padding-bottom: 15px;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+
+        [step1-active] &[step1], [step2-active] &[step2], [step3-active] &[step3] {
+            color: #1bcc8e;
+            border-bottom: 3px solid #1bcc8e;
+
+            [nr] {
+                background: #1bcc8e;
+                color: #fff;
+            }
+        }
+
+        [nr] {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-right: 12px;
+            text-align: center;
+        }
+
+    }
+}
