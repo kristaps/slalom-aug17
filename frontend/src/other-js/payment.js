@@ -38,4 +38,15 @@ $(function () {
         $(this).addClass('hide');
     });
 
+    $("#PayButton").click(function () {
+        $("#PayButton").attr('disabled', true)
+        $("#PayButton i").show()
+        window.setTimeout(
+            function() {
+                window.location.href = '/success.html'
+            },
+            2000
+        )
+    })
+
 });
