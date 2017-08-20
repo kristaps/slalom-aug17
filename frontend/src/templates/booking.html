@@ -9,19 +9,134 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css">
-    <link rel="stylesheet" href="./stylesheets/app.css">
+    <link href="lib/datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/app.css">
 </head>
 
 <body>
 
 <div flex flex-column page-container>
-  Calendar booking
+  <div flex-column page-section inner-page-header>
+    <div page-nav flex flex-space-between>
+      <div company-logo></div>
+      <div page-nav-element>Log in</div>
+    </div>
+  </div>
+
+  <div flex-column page-section flight-search-wrap>
+      <div search-input-wrap flex flex-align-end flex-end>
+        <div input-with-label flex flex-column flex-align-self-start>
+          <label>Departure date</label>
+          <input type='text' id="departure-date" placeholder="dd/mm/yyyy" class="datepicker-here" data-position="right top"/>
+        </div>
+        <div input-with-label flex flex-column flex-align-self-end>
+          <label>Departure airport</label>
+          <input type="text" id="airport-search-input" placeholder="Your city or airport code">
+        </div>
+      </div>
+  </div>
+
+  <div flight-list-header>
+    Closest flights to <span id="selected-airport"></span>
+  </div>
+
+  <div flight-info-wrap flex flex-column>
+    <div flight-info-top flex flex-space-between>
+      <div departure-date>Departure <span id="flight-departure-date"></span></div>
+      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    </div>
+    <div flight-info-middle flex flex-space-between>
+      <div departure-point><span id="flight-departure-point"></span></div>
+      <div id="flight-time"></div>
+      <div arrival-point><span id="flight-arrival-point"></span></div>
+    </div>
+    <div flight-info-bottom flex flex-space-between>
+      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+      <div service-price>Price for appointment: <span id="service-price"></span></div>
+    </div>
+    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
+  </div>
+
+  <div flight-info-wrap flex flex-column>
+    <div flight-info-top flex flex-space-between>
+      <div departure-date>Departure <span id="flight-departure-date"></span></div>
+      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    </div>
+    <div flight-info-middle flex flex-space-between>
+      <div departure-point><span id="flight-departure-point"></span></div>
+      <div id="flight-time"></div>
+      <div arrival-point><span id="flight-arrival-point"></span></div>
+    </div>
+    <div flight-info-bottom flex flex-space-between>
+      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+      <div service-price>Price for appointment: <span id="service-price"></span></div>
+    </div>
+    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
+  </div>
+
+  <div flight-info-wrap flex flex-column>
+    <div flight-info-top flex flex-space-between>
+      <div departure-date>Departure <span id="flight-departure-date"></span></div>
+      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    </div>
+    <div flight-info-middle flex flex-space-between>
+      <div departure-point><span id="flight-departure-point"></span></div>
+      <div id="flight-time"></div>
+      <div arrival-point><span id="flight-arrival-point"></span></div>
+    </div>
+    <div flight-info-bottom flex flex-space-between>
+      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+      <div service-price>Price for appointment: <span id="service-price"></span></div>
+    </div>
+    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
+  </div>
+
+  <div flight-info-wrap flex flex-column>
+    <div flight-info-top flex flex-space-between>
+      <div departure-date>Departure <span id="flight-departure-date"></span></div>
+      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    </div>
+    <div flight-info-middle flex flex-space-between>
+      <div departure-point><span id="flight-departure-point"></span></div>
+      <div id="flight-time"></div>
+      <div arrival-point><span id="flight-arrival-point"></span></div>
+    </div>
+    <div flight-info-bottom flex flex-space-between>
+      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+      <div service-price>Price for appointment: <span id="service-price"></span></div>
+    </div>
+    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
+  </div>
+
+  <div flight-info-wrap flex flex-column>
+    <div flight-info-top flex flex-space-between>
+      <div departure-date>Departure <span id="flight-departure-date"></span></div>
+      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    </div>
+    <div flight-info-middle flex flex-space-between>
+      <div departure-point><span id="flight-departure-point"></span></div>
+      <div id="flight-time"></div>
+      <div arrival-point><span id="flight-arrival-point"></span></div>
+    </div>
+    <div flight-info-bottom flex flex-space-between>
+      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+      <div service-price>Price for appointment: <span id="service-price"></span></div>
+    </div>
+    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
+  </div>
+
+  <div booking-schedule-wrap>
+    <div booking-schedule id="booking-schedule"></div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
-<script src="js/bundle.js"></script>
+<script src="lib/jquery.weekly-schedule-plugin.min.js"></script>
+<script src="lib/datepicker.min.js"></script>
+<script src="lib/datepicker.en.js"></script>
+<script src="other-js/booking.js"></script>
 
 </body>
 

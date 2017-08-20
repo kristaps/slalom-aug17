@@ -39,7 +39,12 @@ b.on('log', gutil.log);
 gulp.task('other-js', function() {
 	return gulp.src('./src/other-js/**')
 		.pipe(gulp.dest('build/other-js'))
-    			.pipe(browserSync.stream());
+	    .pipe(browserSync.stream());
+});
+
+gulp.task('lib', function() {
+	return gulp.src('./src/lib/**')
+		.pipe(gulp.dest('build/lib'));
 });
 
 
@@ -105,4 +110,5 @@ gulp.task('serve', function() {
 });
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'js', 'other-js', 'assets'], 'serve'));
+gulp.task('default', gulpSequence(['html', 'sass', 'js', 'other-js', 'lib', 'assets'], 'serve'));
+

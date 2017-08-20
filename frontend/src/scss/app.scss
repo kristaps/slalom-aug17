@@ -6,6 +6,8 @@
 @import 'colors';
 @import 'provider';
 
+@import 'booking';
+
 @include foundation-global-styles;
 //@include foundation-grid;
 // @include foundation-flex-grid;
@@ -102,8 +104,16 @@ body {
   align-items: flex-end;
 }
 
+[flex-align-self-start] {
+  align-self: flex-start;
+}
+
+[flex-align-self-end] {
+  align-self: flex-end;
+}
+
 [page-container] {
-  max-width: 940px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -144,8 +154,30 @@ body {
   }
 }
 
+[company-logo] {
+  background: url('../assets/medincluded-logo.svg');
+  background-size: contain;
+  width: 20.2rem;
+  height: 4.5rem;
+  background-repeat: no-repeat;
+
+  &[landing] {
+    width: 30.2rem;
+    height: 6.3rem;
+  }
+}
+
+[inner-page-header] {
+  background-color: $custom-green;
+  padding: 1.5rem 0;
+  color: $pure-white;
+}
+
 // Page specific styles
 [page-nav] {
+  width: 70%;
+  margin: 0 auto;
+
   [page-nav-element] {
     font-size: 1.6rem;
     cursor: pointer;
@@ -154,7 +186,6 @@ body {
       margin-right: 2rem;
     }
   }
-  margin-bottom: 4rem;
 }
 
 [step-1-container] {
@@ -166,6 +197,10 @@ body {
   background-color: $custom-green;
   color: $pure-white;
 
+  [header-1] {
+    margin-top: 2rem;
+  }
+
   [header-2] {
     margin-bottom: 4rem;
   }
@@ -175,6 +210,7 @@ body {
   }
 
   label {
+    color: $pure-white;
     width: 70%;
     margin-right: 1rem;
 
@@ -200,7 +236,7 @@ body {
     width: 70%;
     position: relative;
     background: url('../assets/step-1-search-bg.svg');
-    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -209,7 +245,7 @@ body {
   height: 25rem;
 
   [service-categories-wrap] {
-    width: 70%;
+    width: 68%;
     position: absolute;
     right: 50%;
     transform: translateX(50%);
@@ -264,6 +300,13 @@ body {
 
 // Adjust easy autocomplete plugin styles
 .easy-autocomplete-container {
+
+  li {
+    &.selected {
+      color: $pure-white;
+    }
+  }
+
   ul {
     margin: 0;
   }
@@ -301,8 +344,13 @@ body {
   input {
     margin-top: 0.5rem;
   }
-  .eac-item {
+
+  li {
     color: $custom-grey;
     text-transform: capitalize;
+
+    &.selected {
+      color: $pure-white;
+    }
   }
 }
