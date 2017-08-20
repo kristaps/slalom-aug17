@@ -1,0 +1,59 @@
+[success-page] {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #484848;
+    width: 70%;
+    margin: 0 auto;
+
+    [content] {
+        padding: 70px 70px 100px;
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        border-radius: 3px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+        border: solid 1px #d8d8d8;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #1bcc8e;
+    }
+
+    img {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    [email] {
+        font-weight: bold;
+    }
+
+    [resend] {
+        margin-top: -12px;
+
+        a {
+            color: #5f87c0;
+        }
+
+        a:hover {
+            color: #486793;
+        }
+    }
+
+    button {
+        font-weight: bold;
+        padding: 15px 50px;
+        border-radius: 3px;
+        color: #5f87c0;
+        border: solid 2px #5f87c0;
+        margin-top: 30px;
+
+        &:hover {
+            color: #486793;
+            border: solid 2px #486793;
+        }
+    }
+}
