@@ -4,6 +4,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'colors';
+@import 'provider';
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -71,6 +72,10 @@ body {
 
 [flex-column] {
   flex-direction: column;
+}
+
+[flex-row] {
+  flex-direction: row;
 }
 
 [flex-wrap] {

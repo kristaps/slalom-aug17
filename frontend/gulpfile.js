@@ -37,7 +37,8 @@ b.on('log', gutil.log);
 
 gulp.task('other-js', function() {
 	return gulp.src('./src/other-js/**')
-		.pipe(gulp.dest('build/other-js'));
+		.pipe(gulp.dest('build/other-js'))
+    			.pipe(browserSync.stream());
 });
 
 
@@ -96,7 +97,7 @@ gulp.task('serve', function() {
 
   gulp.watch('./src/assets/**/*', ['assets']);
   gulp.watch('./src/js/**/*', ['js']);
-  gulp.watch('./src/js/**/*', ['other-js']);
+  gulp.watch('./src/other-js/**/*', ['other-js']);
   gulp.watch('./src/templates/**/*', ['html']);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
