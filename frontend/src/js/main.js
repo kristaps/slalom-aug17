@@ -36,12 +36,12 @@ let serviceSearchOptions = {
 $("#service-search-input").easyAutocomplete(serviceSearchOptions);
 
 
-// Common use functions
-function scrollIntoView(id) {
-	document.querySelector(id).scrollIntoView({
-		behavior: 'smooth'
-	});
-}
+//set click handler for hot-it-works button
+$("#how-it-works-btn").click(() => {
+	$('html, body').animate({
+		scrollTop: $('#how-it-works').offset().top
+	}, 500);
+});
 
-// window.location.href = `${window.location.origin}/booking.html`;
+
 
