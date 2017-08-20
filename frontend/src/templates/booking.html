@@ -26,20 +26,20 @@
   </div>
 
   <div flex-column page-section flight-search-wrap>
-      <div search-input-wrap flex flex-align-end flex-end>
+    <div search-tip>Please select your nearest airport and preferable departure date</div>
+    <div search-input-wrap flex flex-align-end flex-end>
         <div input-with-label flex flex-column flex-align-self-start>
           <label>Departure date</label>
-          <input type='text' id="departure-date" placeholder="dd/mm/yyyy" class="datepicker-here" data-position="right top"/>
+          <input type='text' id="departure-date" placeholder="dd/mm/yyyy" class="datepicker-here" data-position="bottom right"/>
         </div>
         <div input-with-label flex flex-column flex-align-self-end>
           <label>Departure airport</label>
           <input type="text" id="airport-search-input" placeholder="Your city or airport code">
         </div>
       </div>
-    <div search-tip>Please select your nearest airport and preferable departure date</div>
   </div>
 
-  <div id="flight-list"></div>
+  <div flight-list-header class="hidden" id="flight-list-header">Closest flights to <span></span></div>
 
   <div id="service-info" service-info flex flex-column class="hidden">
     <div service-info-text-wrap flex flex-space-between>
@@ -48,9 +48,19 @@
     </div>
     <div booking-schedule-wrap>
       <div booking-schedule id="booking-schedule"></div>
+      <div booking-summary id="booking-summary">
+        <div summary-footer flex flex-end>
+          <div>Amount overall: </div>
+          <div amount-overall id="amount-overall"></div>
+        </div>
+        <div flex flex-end>
+          <a class="button" href="https://medincluded.com/payment.html" flex-align-end class="button" id="book-btn">Book flight & appointment</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div id="flight-list"></div>
 
 </div>
 
