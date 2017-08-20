@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div class="loader hidden"></div>
 
 @@include('./header.html')
 
@@ -37,89 +38,91 @@
     Closest flights to <span id="selected-airport"></span>
   </div>
 
-  <div flight-info-wrap flex flex-column>
-    <div flight-info-top flex flex-space-between>
-      <div departure-date>Departure <span id="flight-departure-date"></span></div>
-      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+  <div id="flight-list">
+    <div flight-info-wrap flex flex-column>
+      <div flight-info-top flex flex-space-between>
+        <div departure-date>Departure</div>
+        <div flight-price>Price for flight:</div>
+      </div>
+      <div flight-info-middle flex flex-space-between>
+        <div departure-point></div>
+        <div id="flight-time"></div>
+        <div arrival-point></div>
+      </div>
+      <div flight-info-bottom flex flex-space-between>
+        <div flight-service-name>Appointment to </div>
+        <div service-price>Price for appointment: </div>
+      </div>
+      <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
     </div>
-    <div flight-info-middle flex flex-space-between>
-      <div departure-point><span id="flight-departure-point"></span></div>
-      <div id="flight-time"></div>
-      <div arrival-point><span id="flight-arrival-point"></span></div>
-    </div>
-    <div flight-info-bottom flex flex-space-between>
-      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
-      <div service-price>Price for appointment: <span id="service-price"></span></div>
-    </div>
-    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
-  </div>
 
-  <div flight-info-wrap flex flex-column>
-    <div flight-info-top flex flex-space-between>
-      <div departure-date>Departure <span id="flight-departure-date"></span></div>
-      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    <div flight-info-wrap flex flex-column>
+      <div flight-info-top flex flex-space-between>
+        <div departure-date>Departure <span id="flight-departure-date"></span></div>
+        <div flight-price>Price for flight: <span id="flight-price"></span></div>
+      </div>
+      <div flight-info-middle flex flex-space-between>
+        <div departure-point><span id="flight-departure-point"></span></div>
+        <div id="flight-time"></div>
+        <div arrival-point><span id="flight-arrival-point"></span></div>
+      </div>
+      <div flight-info-bottom flex flex-space-between>
+        <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+        <div service-price>Price for appointment: <span id="service-price"></span></div>
+      </div>
+      <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
     </div>
-    <div flight-info-middle flex flex-space-between>
-      <div departure-point><span id="flight-departure-point"></span></div>
-      <div id="flight-time"></div>
-      <div arrival-point><span id="flight-arrival-point"></span></div>
-    </div>
-    <div flight-info-bottom flex flex-space-between>
-      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
-      <div service-price>Price for appointment: <span id="service-price"></span></div>
-    </div>
-    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
-  </div>
 
-  <div flight-info-wrap flex flex-column>
-    <div flight-info-top flex flex-space-between>
-      <div departure-date>Departure <span id="flight-departure-date"></span></div>
-      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    <div flight-info-wrap flex flex-column>
+      <div flight-info-top flex flex-space-between>
+        <div departure-date>Departure <span id="flight-departure-date"></span></div>
+        <div flight-price>Price for flight: <span id="flight-price"></span></div>
+      </div>
+      <div flight-info-middle flex flex-space-between>
+        <div departure-point><span id="flight-departure-point"></span></div>
+        <div id="flight-time"></div>
+        <div arrival-point><span id="flight-arrival-point"></span></div>
+      </div>
+      <div flight-info-bottom flex flex-space-between>
+        <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+        <div service-price>Price for appointment: <span id="service-price"></span></div>
+      </div>
+      <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
     </div>
-    <div flight-info-middle flex flex-space-between>
-      <div departure-point><span id="flight-departure-point"></span></div>
-      <div id="flight-time"></div>
-      <div arrival-point><span id="flight-arrival-point"></span></div>
-    </div>
-    <div flight-info-bottom flex flex-space-between>
-      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
-      <div service-price>Price for appointment: <span id="service-price"></span></div>
-    </div>
-    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
-  </div>
 
-  <div flight-info-wrap flex flex-column>
-    <div flight-info-top flex flex-space-between>
-      <div departure-date>Departure <span id="flight-departure-date"></span></div>
-      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    <div flight-info-wrap flex flex-column>
+      <div flight-info-top flex flex-space-between>
+        <div departure-date>Departure <span id="flight-departure-date"></span></div>
+        <div flight-price>Price for flight: <span id="flight-price"></span></div>
+      </div>
+      <div flight-info-middle flex flex-space-between>
+        <div departure-point><span id="flight-departure-point"></span></div>
+        <div id="flight-time"></div>
+        <div arrival-point><span id="flight-arrival-point"></span></div>
+      </div>
+      <div flight-info-bottom flex flex-space-between>
+        <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+        <div service-price>Price for appointment: <span id="service-price"></span></div>
+      </div>
+      <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
     </div>
-    <div flight-info-middle flex flex-space-between>
-      <div departure-point><span id="flight-departure-point"></span></div>
-      <div id="flight-time"></div>
-      <div arrival-point><span id="flight-arrival-point"></span></div>
-    </div>
-    <div flight-info-bottom flex flex-space-between>
-      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
-      <div service-price>Price for appointment: <span id="service-price"></span></div>
-    </div>
-    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
-  </div>
 
-  <div flight-info-wrap flex flex-column>
-    <div flight-info-top flex flex-space-between>
-      <div departure-date>Departure <span id="flight-departure-date"></span></div>
-      <div flight-price>Price for flight: <span id="flight-price"></span></div>
+    <div flight-info-wrap flex flex-column>
+      <div flight-info-top flex flex-space-between>
+        <div departure-date>Departure <span id="flight-departure-date"></span></div>
+        <div flight-price>Price for flight: <span id="flight-price"></span></div>
+      </div>
+      <div flight-info-middle flex flex-space-between>
+        <div departure-point><span id="flight-departure-point"></span></div>
+        <div id="flight-time"></div>
+        <div arrival-point><span id="flight-arrival-point"></span></div>
+      </div>
+      <div flight-info-bottom flex flex-space-between>
+        <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
+        <div service-price>Price for appointment: <span id="service-price"></span></div>
+      </div>
+      <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
     </div>
-    <div flight-info-middle flex flex-space-between>
-      <div departure-point><span id="flight-departure-point"></span></div>
-      <div id="flight-time"></div>
-      <div arrival-point><span id="flight-arrival-point"></span></div>
-    </div>
-    <div flight-info-bottom flex flex-space-between>
-      <div flight-service-name>Appointment to <span id="flight-service-name"></span></div>
-      <div service-price>Price for appointment: <span id="service-price"></span></div>
-    </div>
-    <button class="button" onclick="scrollIntoView('#booking-schedule')">Show appointment schedule</button>
   </div>
 
   <div booking-schedule-wrap>
