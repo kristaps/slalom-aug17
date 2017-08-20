@@ -172,6 +172,15 @@ body {
   background-color: $custom-green;
   padding: 1.5rem 0;
   color: $pure-white;
+  img {
+    border: solid 2px #24b985;
+    border-radius: 18px;
+    width: 36px;
+    height: 36px;
+  }
+  [span] {
+
+  }
 }
 
 .loader {

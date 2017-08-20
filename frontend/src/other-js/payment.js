@@ -14,9 +14,14 @@ $(function () {
         $(".amount").text(parseFloat(amount).toFixed(2))
     }
 
+    var sessionAmount = JSON.parse(sessionStorage.getItem("amount"));
     var urlAmount = getParameterByName('amount')
     if (urlAmount != null) {
         setAmount(urlAmount)
+    }
+
+    if(sessionAmount != null) {
+        setAmount(sessionAmount)
     }
 
     $('[data-toggle="popover"]').popover();
