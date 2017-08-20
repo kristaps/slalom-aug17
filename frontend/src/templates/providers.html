@@ -3,9 +3,9 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>symm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medincluded</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css">
@@ -14,15 +14,51 @@
 </head>
 
 <body>
-
-<div flex flex-column page-container>
-  Providers list goes here
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
-<script src="other-js/providers.js"></script>
-
+    <div flex flex-column page-container>
+        <div provider-list-section page-section>
+            <div provider-list>
+                <div provider-element flex flex-column>
+                    <div flex flex-space-between>
+                        <div provider-title>Title</div>
+                        <div flex flex-end>
+                            <div provider-price-label>Price for service: </div>
+                            <div provider-price flex flex-end>$ 530.00</div>
+                        </div>
+                    </div>
+                    <div provider-location>
+                        <img src="assets/location.svg" />Location
+                    </div>
+                    <div provider-status flex flex-space-between>
+                        <div flex flex-row>
+                            <div provider-review flex flex-row>
+                                <div provider-stars flex flex-row>
+                                    <i provider-star class="star-1 fa fa-star" aria-hidden="true" />
+                                    <i provider-star class="star-2 fa fa-star" aria-hidden="true" />
+                                    <i provider-star class="star-3 fa fa-star" aria-hidden="true" />
+                                    <i provider-star class="star-4 fa fa-star" aria-hidden="true" />
+                                    <i provider-star class="star-5 fa fa-star" aria-hidden="true" />
+                                </div>
+                                <div>(<span provider-review-count>34</span>)</div>
+                                <div provider-review-status>Good</div>
+                            </div>
+                            <div provider-badge-row flex flex-row>
+                                <img provider-badge src="assets/badge-certificate.svg" />
+                                <img provider-badge src="assets/badge-2.svg" />
+                                <img provider-badge src="assets/badge-3.svg" />
+                            </div>
+                        </div>
+                        <div flex flex-end>
+                            <a provider-checkout-button href="#">Check flight prices<i provider-checkout-button-arrow href class="fa fa-chevron-right" aria-hidden="true"></i>
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+    <script src="other-js/providers.js"></script>
 </body>
 
 </html>

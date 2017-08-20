@@ -1,0 +1,79 @@
+[provider-list-section] {
+    color: #484848;
+    [provider-list] {
+        margin: 0 auto;
+        width: 70%;
+        position: relative;
+
+        [provider-element] {
+            border-radius: 3px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+            border: solid 1px #d8d8d8;
+            padding: 3rem;
+
+            [provider-title] {
+                color: #5f87c0;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            [provider-price-label] {
+                margin-right: 0.5rem;
+                font-size: 1.8rem;
+            }
+            [provider-price] {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #1bcc8e;
+            }
+            [provider-location] {
+                margin-top: 1.1rem;
+            }
+            [provider-star] {
+                color: #1bcc8e;
+                letter-spacing: 0.5rem;
+            }
+            [provider-stars] {
+                margin-top: 0.4rem;
+            }
+            [provider-status] {
+                padding-top: 3rem;
+            }
+            [provider-badge] {
+                margin-left: 2rem;
+            }
+            [provider-review] {
+                font-size: 1.6rem;
+            }
+
+            [provider-review-count] {
+                color: #5f87c0;
+            }
+
+            [provider-review-status] {
+                margin-left: 0.5rem;
+            }
+
+            [provider-badge-row] {
+                margin-top: -0.5rem;
+            }
+
+            [provider-checkout-button] {
+                width: 21.4rem;
+                height: 5rem;
+                border-radius: 0.3rem;
+                background-color: #5f87c0;
+                padding: 1.1rem;
+                color: #ffffff;
+                display: inline;
+                text-align: center;
+                vertical-align: middle;
+                margin-top: -1.1rem;
+            }
+
+            [provider-checkout-button-arrow] {
+                margin-left: 1rem;
+            }
+        }
+    }
+}

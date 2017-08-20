@@ -4,6 +4,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'colors';
+@import 'provider';
 
 @import 'booking';
 
@@ -73,6 +74,10 @@ body {
 
 [flex-column] {
   flex-direction: column;
+}
+
+[flex-row] {
+  flex-direction: row;
 }
 
 [flex-wrap] {

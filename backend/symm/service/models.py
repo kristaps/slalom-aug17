@@ -32,3 +32,10 @@ class Provider(models.Model):
 
     def __str__(self):
         return 'Provider: {}'.format(self.name)
+
+
+class Appointment(models.Model):
+    starts_at = models.DateTimeField()
+    ends_at = models.DateTimeField()
+    provider = models.ForeignKey(Provider)
+    service = models.ForeignKey(Service)
