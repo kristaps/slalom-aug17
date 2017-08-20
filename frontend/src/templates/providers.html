@@ -15,49 +15,12 @@
 
 <body>
     @@include('./header.html')
-
     <div flex flex-column page-container>
         <div provider-list-section page-section>
             <div provider-list-header>
-                <label>We found <span provider-count class="provider-count">44</span> clinics worldwide available to book now</label>
+                <label>We found <span provider-count id="provider-count">44</span> clinics worldwide available to book now</label>
             </div>
-            <div provider-list>
-                <div provider-element flex flex-column>
-                    <div flex flex-space-between>
-                        <div provider-title class="provider-title">Title</div>
-                        <div flex flex-end>
-                            <div provider-price-label>Price for service: </div>
-                            <div provider-price flex flex-end class="provider-price">$ 530.00</div>
-                        </div>
-                    </div>
-                    <div provider-location>
-                        <img src="assets/location.svg" /><span class="provider-location">Location</span>
-                    </div>
-                    <div provider-status flex flex-space-between>
-                        <div flex flex-row>
-                            <div provider-review flex flex-row>
-                                <div provider-stars flex flex-row>
-                                    <i provider-star class="provider-star-1 fa fa-star" aria-hidden="true" />
-                                    <i provider-star class="provider-star-2 fa fa-star" aria-hidden="true" />
-                                    <i provider-star class="provider-star-3 fa fa-star" aria-hidden="true" />
-                                    <i provider-star class="provider-star-4 fa fa-star" aria-hidden="true" />
-                                    <i provider-star class="provider-star-5 fa fa-star" aria-hidden="true" />
-                                </div>
-                                <div>(<span provider-review-count class="provider-review-count">34</span>)</div>
-                                <div provider-review-status class="provider-review-status">Good</div>
-                            </div>
-                            <div provider-badge-row flex flex-row>
-                                <img provider-badge class="provider-badge-1" src="assets/badge-certificate.svg" />
-                                <img provider-badge class="provider-badge-2" src="assets/badge-2.svg" />
-                                <img provider-badge class="provider-badge-3" src="assets/badge-3.svg" />
-                            </div>
-                        </div>
-                        <div flex flex-end>
-                            <a provider-checkout-button href="#" class="provider-check-flights-button">Check flight prices<i provider-checkout-button-arrow href class="fa fa-chevron-right" aria-hidden="true"></i>
-</a>
-                        </div>
-                    </div>
-                </div>
+            <div provider-list id="provider-list">
             </div>
         </div>
     </div>
